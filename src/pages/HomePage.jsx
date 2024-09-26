@@ -1,0 +1,17 @@
+import {Link} from 'react-router-dom'
+import {users} from '../assets/users'
+import ProfilePage from './ProfilePage';
+export default function HomePage()
+{
+    return(
+    <main> 
+        <h1>Home Page</h1>
+        <div>
+        {users.map((user)=> ( <Link to={`/profile/${user.id}`} key={user.id}>{user.name} 
+          </Link>))}
+
+
+        </div>
+    </main>
+)
+}
